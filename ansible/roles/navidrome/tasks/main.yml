@@ -1,0 +1,14 @@
+- name: start container
+  community.docker.docker_container:
+    name: navidrome
+    image: deluan/navidrome:latest
+    recreate: true
+    restart: true
+    ports:
+      - '2003:4533'
+    volumes:
+      - '/opt/naivdrome/data:/data'
+      - '/opt/navidrome/music:/music:ro'
+    networks:
+      - name: '{{ network }}'
+    state: started
