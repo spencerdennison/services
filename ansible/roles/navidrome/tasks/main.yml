@@ -7,7 +7,7 @@
     ports:
       - '2003:4533'
     volumes:
-      - '/opt/naivdrome/data:/data'
+      - '/opt/navidrome/data:/data'
       - '/opt/navidrome/music:/music:ro'
     networks:
       - name: '{{ network }}'
