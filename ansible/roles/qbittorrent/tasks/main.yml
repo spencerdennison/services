@@ -9,10 +9,10 @@
       - '6881:6881'
       - '6881:6881/udp'
     env:
-      PUID: 1000
-      GUID: 1000
-      WEBUI_PORT: 2004
-      TORRENTING_PORT: 6881
+      PUID: '1000'
+      GUID: '1000'
+      WEBUI_PORT: '2004'
+      TORRENTING_PORT: '6881'
     volumes:
       - '/opt/qbittorrent/config:/config'
       - '/opt/navidrome/music:/downloads'
