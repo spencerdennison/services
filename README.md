@@ -31,3 +31,18 @@ Run Ansible playbooks
 ```bash
 ansible-playbook local.yml --ask-become-pass --ask-vault-pass
 ```
+
+## Post-Installation
+
+Add device to Tailscale network
+
+```bash
+sudo tailscale up
+```
+
+Reboot
+
+```bash
+sudo reboot
+```
+
