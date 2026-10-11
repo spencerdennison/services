@@ -2,6 +2,9 @@
 
 ## Pre-Installation
 
+- Add Cloudflare DNS record pointing to server
+- Install Debian on server
+
 Generate new SSH key on control device
 
 ```bash
@@ -13,9 +16,6 @@ Copy SSH key from control device to server
 ```bash
 ssh-copy-id -i ~/.ssh/service.pub username@address
 ```
-
-- Add Cloudflare DNS record pointing to server
-- Install Debian on server
 
 ## Installation
 
