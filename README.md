@@ -1,32 +1,49 @@
 # Services
 
+## Pre-Installation
+
+Generate new SSH key on control device
+
+```bash
+ssh-keygen -t ed25519 -f ~/.ssh/services
+```
+
+Copy SSH key from control device to server
+
+```bash
+ssh-copy-id -i ~/.ssh/service.pub administrator@service.spencerdennison.com
+```
+
+- Add Cloudflare DNS record pointing to server
+- Install Debian on server
+
 ## Installation
 
-Update and upgrade apt package repository
+Update and upgrade apt package repository on server
 
 ```bash
 sudo apt update && sudo apt upgrade
 ```
 
-Install Ansible and Git
+Install Ansible and Git on server
 
 ```bash
 sudo apt install ansible git
 ```
 
-Clone repository
+Clone repository to server
 
 ```bash
 git clone https://github.com/spencerdennison/services.git
 ```
 
-Change into Ansible directory
+Change into Ansible directory on server
 
 ```bash
 cd services/ansible
 ```
 
-Run Ansible playbooks
+Run Ansible playbooks on server
 
 ```bash
 ansible-playbook local.yml --ask-become-pass --ask-vault-pass
@@ -34,15 +51,14 @@ ansible-playbook local.yml --ask-become-pass --ask-vault-pass
 
 ## Post-Installation
 
-Add device to Tailscale network
+Add server to Tailscale network
 
 ```bash
 sudo tailscale up
 ```
 
-Reboot
+Reboot server
 
 ```bash
 sudo reboot
 ```
-
