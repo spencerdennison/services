@@ -11,7 +11,7 @@ ssh-keygen -t ed25519 -f ~/.ssh/services
 Copy SSH key from control device to server
 
 ```bash
-ssh-copy-id -i ~/.ssh/service.pub administrator@service.spencerdennison.com
+ssh-copy-id -i ~/.ssh/service.pub username@address
 ```
 
 - Add Cloudflare DNS record pointing to server
